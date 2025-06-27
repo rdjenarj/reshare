@@ -15,7 +15,7 @@
   background: white;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 0 10px #f9de7a;
+  box-shadow: 0 0 10px #e6dec2;
   flex: 1 1 300px;
   max-width: 500px;
 }
@@ -23,13 +23,13 @@
 .donasi-form h2 {
   font-size: 28px;
   margin-bottom: 0.5rem;
-  color: #141414;
+  color: #000033;
 }
 
 .subjudul {
   font-size: 14px;
   margin-bottom: 1.5rem;
-  color: #3c3b3b;
+  color: #000033;
 }
 
 .donasi-form form input,
@@ -38,14 +38,14 @@
   width: 100%;
   margin-bottom: 1rem;
   padding: 0.8rem;
-  border: 1px solid #ccc;
+  border: 1px solid #000033;
   border-radius: 5px;
   box-sizing: border-box;
 }
 
 .donasi-form form button {
   width: 100%;
-  background-color: #efcd97;
+  background-color: #000033;
   color: white;
   padding: 0.8rem;
   border: none;
@@ -54,7 +54,7 @@
 }
 
 .donasi-form form button:hover {
-  background-color: #a4823a;
+  background-color: #a8a8b3;
 }
 
 .donasi-image {
@@ -86,7 +86,7 @@ form button {
     }
 
     header {
-      background: #6a1b9a;
+      background: #000033;
       color: white;
       padding: 1rem;
       text-align: center;
@@ -103,7 +103,7 @@ form button {
     }
 
     nav button:hover {
-      background: #ddd;
+      background: #c1c1c7;
     }
 
     main {
@@ -157,23 +157,36 @@ form button {
   <title>Demo ReShared</title>
   
 <style>
+  .logo-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #000033;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 8px;
+}
 
- #login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
+.logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000033;
+}
 
-  .login-box {
-    background: white;
-    padding: 2rem;
-    border-radius: 20px;
-    box-shadow: 0 0 10px #ccc;
-    width: 100%;
-    max-width: 350px;
-    text-align: center;
-  }
+
+.login-box {
+  background: rgb(252, 252, 250);
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #ccc;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
 
 .login-box h1 {
   font-size: 32px;
@@ -187,12 +200,12 @@ form button {
 
 .login-box h3 {
   margin-bottom: 1.5rem;
-  color: #333;
+  color: #005a55;
 }
 
 .login-box label {
   display: block;
-  text-align: center;
+  text-align: left;
   margin: 0.5rem 0 0.2rem;
 }
 
@@ -201,7 +214,7 @@ form button {
   width: 100%;
   padding: 0.6rem;
   margin-bottom: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid #706f74;
   border-radius: 5px;
 }
 
@@ -214,7 +227,7 @@ form button {
 .login-box button {
   width: 100%;
   padding: 0.8rem;
-  background: #f5c6a6;
+  background: #3b3850;
   color: white;
   border: none;
   border-radius: 5px;
@@ -222,92 +235,120 @@ form button {
   cursor: pointer;
 }
 
-
 .login-box button:hover {
-  background: #ecd0ad;
+  background: #97989a;
 }
 
     body { font-family: Arial, sans-serif; }
-    nav { background: #e8e6cd; padding: 1rem; text-align: center; }
+    nav { background: #FFFFF0; padding: 1rem; text-align: center; }
     nav button {
       margin: 0.5rem;
       padding: 0.5rem 1rem;
       border: none;
       background: white;
-      color: #454346;
+      color: #000033;
       font-weight: bold;
       cursor: pointer;
     }
     .page { display: none; padding: 2rem; }
-  </style>
-  <body>
-</head>
-<body>
-
- <nav>
-  <button onclick="showPage('beranda')">Beranda</button>
-  <button onclick="showPage('cari')">Cari Barang</button>
-  <button onclick="showPage('donasi')">Donasi Barang</button>
-  <button onclick="showPage('login')">Login</button>
-  <button onclick="showPage('profil')">Profil</button>
-</nav>
-
-  <section id="beranda" class="page" style="display: block;">
-  <h2 style="font-size: 26px; margin-bottom: 0.5rem;">Beranda</h2>
- 
-  <!-- Daftar barang -->
-  <h3 style="margin-bottom: 1rem;">Barang Bekas Terbaru</h3>
-  <div class="barang-list">
-    <div class="barang">
-      <img src="krsi.jpg" alt="Kursi">
-      <style>
-  .barang img {
+    .barang img {
     width: 100px;
     height: 100px;
     object-fit: cover;
     border-radius: 8px;
   }
-</style>
+  </style>
 
+  <body>
+    
+</head>
+<body>
+
+ <nav style="display: flex; align-items: center; justify-content: space-between;">
+  <!-- Tambahkan logo di sini -->
+  <div class="logo-reshared" style="display: flex; align-items: center;">
+    <div class="logo-circle">♻</div>
+    <span class="logo-text">ReShared</span>
+  </div>
+
+  <!-- Tombol navigasi -->
+  <div>
+    <button onclick="showPage('beranda')">Beranda</button>
+    <button onclick="showPage('cari')">Cari Barang</button>
+    <button onclick="showPage('donasi')">Donasi Barang</button>
+    <button onclick="showPage('login')">Login</button>
+    <button onclick="showPage('profil')">Profil</button>
+  </div>
+</nav>
+
+
+ <section id="beranda" class="page" style="display: block;">
+  <h2 style="font-size: 26px; margin-bottom: 0.5rem;">Beranda</h2>
+  <h3 style="margin-bottom: 1rem;">Barang Bekas Terbaru</h3>
+
+  <div class="barang-list">
+    <div class="barang">
+      <img src="krsi.jpg" alt="Kursi" onclick="showDetailBarang('krsi.jpg', 'Kursi Makan', '📍 Jakarta', 'Furnitur', 'Kursi makan kayu dengan bantalan kain abu-abu. Kondisi masih bagus.', 'Kalisa', 'kalisha.jpg')">
       <p>Kursi Makan</p>
       <p>Jakarta</p>
     </div>
     <div class="barang">
-      <img src="bju.jpg" alt="Baju">
+      <img src="baju.jpg" alt="Baju" onclick="showDetailBarang('baju.jpg', 'Baju', '📍 Jawa Barat-Bogor', 'Pakaian', 'Baju bekas layak pakai.', 'Dina', 'dina.jpg')">
       <p>Baju</p>
       <p>Bogor</p>
     </div>
     <div class="barang">
-      <img src="bantal.jpg" alt="Bantal">
+      <img src="bantal.jpg" alt="Bantal" onclick="showDetailBarang('bantal.jpg', 'Bantal', '📍 Jawa Timur-Surabaya', 'Perabot', 'Bantal tidur empuk, kondisi bersih.', 'Tirza', 'tirza.jpg')">
       <p>Bantal</p>
       <p>Surabaya</p>
     </div>
     <div class="barang">
-      <img src="buku.jpg" alt="Buku">
+      <img src="buku 2.jpg" alt="Buku" onclick="showDetailBarang('buku 2.jpg', 'Buku', '📍 Jawa Barat-Bandung', 'Alat tulis','Kumpulan buku bacaan anak dan remaja', 'Yusuf', 'yusuf.jpg')">
       <p>Buku</p>
       <p>Bandung</p>
     </div>
     <div class="barang">
-      <img src="sepatu.jpg" alt="sepatu">
-      <p>sepatu</p>
+      <img src="sepatu.jpg" alt="Sepatu" onclick="showDetailBarang('sepatu.jpg', 'Sepatu', '📍 Jawa Barat-Bandung', 'Pakaian', 'Sepatu bekas olahraga ukuran 42.', 'Bayu', 'bayu.jpg')">
+      <p>Sepatu</p>
       <p>Bandung</p>
-   </div>
-   <div class="barang">
-      <img src="sandal.jpg" alt="sendal">
-      <p>sendal</p>
-      <p>makassar</p>
-   </div>
-   <div class="barang">
-      <img src="selimut.jpg" alt="selimut">
-      <p>selimut</p>
+    </div>
+    <div class="barang">
+      <img src="sandal.jpg" alt="Sandal" onclick="showDetailBarang('sandal.jpg', 'Sandal', '📍Sulawesi Selatan-Makassar', 'Pakaian', 'Sandal santai masih baru.', 'Nina', 'nina.jpg')">
+      <p>Sandal</p>
+      <p>Makassar</p>
+    </div>
+    <div class="barang">
+      <img src="selimut.jpg" alt="Selimut" onclick="showDetailBarang('selimut.jpg', 'Selimut', '📍Jawa Barat-Bandung', 'Perabot', 'Selimut hangat untuk musim hujan.', 'Maya', 'maya.jpg')">
+      <p>Selimut</p>
       <p>Bandung</p>
-   </div>
-<div class="barang">
-      <img src="tas.jpg" alt="tas">
-      <p>tas</p>
-      <p>Bakasi</p>
-   </div>
-</section>
+    </div>
+    <div class="barang">
+      <img src="tas.jpg" alt="Tas" onclick="showDetailBarang('tas.jpg', 'Tas', '📍 Jawa Barat-Bekasi', 'Pakaian', 'Tas ransel bekas kuliah.', 'Rani', 'rani.jpg')">
+      <p>Tas</p>
+      <p>Bekasi</p>
+    </div>
+    <div class="barang">
+      <img src="lemari.jpg" alt="Lemari" onclick="showDetailBarang('lemari.jpg', 'Lemari', '📍 Jawa Timur-Malang', 'Perabot', 'Lemari baju.', 'Rini', 'rini.jpg')">
+      <p>Lemari</p>
+      <p>Malang</p>
+    </div>
+    <div class="barang">
+      <img src="HP.jpg" alt="HP" onclick="showDetailBarang('HP.jpg', 'HP', '📍 Jawa Timur-Surabaya', 'Perabot', 'Handphone bekas.', 'Cinta', 'Cinta.jpg')">
+      <p>HP</p>
+      <p>Surabaya</p>
+    </div>
+    <div class="barang">
+      <img src="sepeda.jpg" alt="HP" onclick="showDetailBarang('Sepeda.jpg', 'HP', '📍 Jawa Barat-Sukabumi', 'Perabot', 'Sepeda pemakaian 5 tahun.', 'Qila', 'qila.jpg')">
+      <p>Sepeda</p>
+      <p>Sukabumi</p>
+    </div>
+    <div class="barang">
+      <img src="mainan.jpg" alt="Mainan" onclick="showDetailBarang('Mainan.jpg', 'Mainan', '📍 Sulawesi Tenggara-Kendari', 'Mainan', 'Mainan anak-anak.', 'Rizky', 'rizky.jpg')">
+      <p>Mainan</p>
+      <p>Kendari</p>
+    </div>
+  </section>
+
 
   <section id="cari" class="page">
      <h2 style="font-size: 26px; margin-bottom: 0.5rem;">Cari Barang</h2>
@@ -316,27 +357,26 @@ form button {
   <!-- Form pencarian -->
   <form id="formCariBarang" style="margin-top: 1rem; margin-bottom: 2rem;">
     <input type="text" placeholder="Cari barang..." style="padding: 0.5rem; width: 200px;">
-    <select style="padding: 0.5rem;">
-      <option>Kategori</option>
-      <option>Elektronik</option>
-      <option>Pakaian</option>
-      <option>Mainan</option>
-      <option>Buku</option>
-      <option>Sepatu</option>
-      <option>Perabotan Rumah Tangga</option>
-    </select>
-    <select style="padding: 0.5rem;">
-      <option>Lokasi</option>
-      <option>Jakarta</option>
-      <option>Yogyakarta</option>
-      <option>Jawa Timur</option>
-      <option>Jawa Barat</option>
-      <option>Jawa Tengah</option>
-      <option>Sulawesi Tengah</option>
-      <option>Sulawesi Selatan</option>
-      <option>Sulawesi Barat</option>
-      <option>Sulawesi Tenggara</option>
-    </select>
+    <select id="filterKategori" onchange="filterBarang()">
+       <option value="">Pilih Kategori</option>
+       <option value="Furnitur">Furnitur</option>
+       <option value="Pakaian">Pakaian</option>
+       <option value="Perabot">Perabot</option>
+       <option value="Mainan">Mainan</option>
+  </select>
+    <select id="filterLokasi" onchange="filterBarang()">
+       <option value="">Pilih Lokasi</option>
+       <option value="Jakarta">Jakarta</option>
+       <option value="Bogor">Bogor</option>
+       <option value="Bandung">Bandung</option>
+       <option value="Surabaya">Surabaya</option>
+       <option value="Makassar">Makassar</option>
+       <option value="Bekasi">Bekasi</option>
+       <option value="Malang">Malang</option>
+       <option value="Kendari">Kendari</option>
+       <option value="Sukabumi">Sukabumi</option>
+   </select>
+
     <button type="submit" style="padding: 0.5rem 1rem;">Cari</button>
   </form>
 
@@ -344,49 +384,37 @@ form button {
   <h3 style="margin-bottom: 1rem;">Barang Bekas Terbaru</h3>
   <div class="barang-list">
     <div class="barang">
-      <img src="krsi.jpg" alt="Kursi">
+      <img src="krsi.jpg" onclick="showDetailBarang('krsi.jpg', 'Kursi Makan', '📍 Jakarta', 'Furnitur', 'Kursi makan kayu dengan bantalan kain abu-abu. Kondisi masih bagus.', 'Alisha', 'alisha.jpg')">
       <p>Kursi Makan</p>
       <p>Jakarta</p>
     </div>
     <div class="barang">
-      <img src="oven.jpg" alt="Microwave">
+      <img src="oven.jpg" onclick="showDetailBarang('oven.jpg', 'Oven', '📍 Bogor', 'Perabotan Rumah Tangga', 'Kondisi masih bagus.', 'Nadia', 'Nadia.jpg')">
       <p>Oven Microwave</p>
       <p>Bogor</p>
     </div>
     <div class="barang">
-      <img src="sofa.jpg" alt="Sofa">
+      <img src="sofa.jpg" onclick="showDetailBarang('sofa.jpg', 'Sofa', '📍 Surabaya', 'Furnitur', 'Kondisi masih bagus.', 'Lili', 'Lili.jpg')">
       <p>Sofa</p>
       <p>Surabaya</p>
     </div>
     <div class="barang">
-      <img src="rak.jpg" alt="Rak Buku">
+      <img src="rak.jpg" onclick="showDetailBarang('rak.jpg', 'Rak', '📍 Bandung', 'Furnitur', 'Kondisi masih bagus.', 'putri', 'Putri.jpg')">
       <p>Rak Buku</p>
       <p>Bandung</p>
-  </section>
-
-<section id="register" class="page">
-  <div class="login-box">
-    <img src="https://i.ibb.co/5rc7D7y/logo-reshared.png" alt="ReShared Logo" style="width: 50px; margin-bottom: 1rem;">
-    <h2>Registrasi</h2>
-    <form id="registerForm">
-      <input type="text" placeholder="Nama Lengkap" required>
-      <input type="email" placeholder="Alamat Email" required>
-      <input type="password" placeholder="Password" required>
-      <input type="text" placeholder="Alamat Domisili" required>
-      <select required>
-        <option value="">Pilih Peran</option>
-        <option value="donatur">Donatur</option>
-        <option value="penerima">Penerima</option>
-      </select>
-      <button type="submit">Daftar</button>
-    </form>
-    <div style="margin-top: 1rem; font-size: 0.9rem;">
-      <p>Sudah punya akun? <a href="#" onclick="showPage('login')">Login di sini</a></p>
     </div>
-    <div id="registerMessage" style="margin-top: 1rem;"></div>
-  </div>
-</section>
+     <div class="barang">
+      <img src="celana.jpg" onclick="showDetailBarang('celana.jpg', 'Celana', '📍 Palopo', 'Pakaian', 'Kondisi tidak ada yang robek.', 'marsya', 'marsya.jpg')">
+      <p>Celana Jeans</p>
+      <p>Palopo</p>
+    </div>
+     <div class="barang">
+      <img src="jam tangan.jpg" onclick="showDetailBarang('jam tangan.jpg', 'jam tangan', '📍 Palopo', 'Pakaian', 'Baterai rusak tapi masi bisa di pakai.', 'Intan', 'intan.jpg')">
+      <p>Jam Tangan</p>
+      <p>Palopo</p>
+    </div>
 
+</section>
 
  <section id="donasi" class="page">
   <div class="donasi-wrapper">
@@ -413,14 +441,18 @@ form button {
 
     <!-- Gambar box (opsional) -->
     <div class="-Donasi-image">
-      <img src="https://png.pngtree.com/png-clipart/20220831/ourmid/pngtree-cardboard-kardus-cartoon-png-image_6132313.png" alt="Box Donasi" width="200">
+      <img src="box 2.png" alt="Box Donasi" width="400">
     </div>
   </div>
 </section>
 
+<!-- LOGIN -->
 <section id="login" class="page">
   <div class="login-box">
-    <img src="https://i.ibb.co/5rc7D7y/logo-reshared.png" alt="ReShared Logo" style="width: 50px; margin-bottom: 1rem;">
+    <div class="logo-reshared" style="display: flex; align-items: center;">
+    <div class="logo-circle">♻</div>
+    <span class="logo-text">ReShared</span>
+  </div>
     <h2>Login</h2>
     <form id="loginForm">
       <input type="email" placeholder="Alamat Email" required>
@@ -430,100 +462,208 @@ form button {
     <div class="links" style="margin-top: 1rem; font-size: 0.9rem;">
       <p>Belum punya akun? <a href="#" onclick="showPage('register')">Daftar</a></p>
     </div>
-    <div id="loginMessage" style="margin-top: 1rem;"></div>
+    <div id="loginMessage" style="margin-top: 2rem;"></div>
   </div>
 </section>
 
-</section><section id="profil" class="page">
+<section id="register" class="page" style="display: none;">
+  <div style="max-width: 400px; margin: auto; background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.1); text-align: center;">
+    <div class="logo-reshared" style="display: flex; align-items: center;">
+    <div class="logo-circle">♻</div>
+    <span class="logo-text">ReShared</span>
+  </div>
+    <h2 style="color: #000033; font-size: 24px;">Daftar Akun Baru</h2>
+    <p style="font-size: 14px; color: #000033;">Bergabunglah sebagai Donatur atau Penerima</p>
+
+    <form id="registerForm">
+      <input type="text" placeholder="Nama Lengkap" required style="margin: 10px 0; width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; box-sizing: border-box;">
+      <input type="email" placeholder="Alamat Email" required style="margin: 10px 0; width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; box-sizing: border-box;">
+      <input type="password" placeholder="Password" required style="margin: 10px 0; width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; box-sizing: border-box;">
+      
+      <div style="text-align: left; margin: 10px 0;">
+        <label><input type="radio" name="role" value="Donatur" required> Donatur</label><br>
+        <label><input type="radio" name="role" value="Penerima" required> Penerima</label>
+      </div>
+
+      <button type="submit" style="margin-top: 10px; width: 100%; background: #000033; color: white; padding: 12px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">Daftar Sekarang</button>
+    </form>
+
+    <p style="margin-top: 1rem; font-size: 14px;">Sudah punya akun? <a href="#" onclick="showPage('login')" style="color: #000033; text-decoration: underline;">Login di sini</a></p>
+  </div>
+</section>
+
+<section id="profil" class="page">
   <div style="max-width: 600px; margin: auto; background: #fffbea; padding: 2rem; border-radius: 15px;">
+
+    <!-- Profil Pengguna -->
     <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
-      <img src="pngtree-man-profile-icon-silhouette-of-businessman-face-profile-vector-png-image_7058983.png" alt="Foto Profil" style="width: 70px; height: 70px; border-radius: 50%; margin-right: 1rem;">
+      <img src="pngtree-man-profile-icon-silhouette-of-businessman-face-profile-vector-png-image_7058983.png" 
+           alt="Foto Profil" 
+           style="width: 70px; height: 70px; border-radius: 50%; margin-right: 1rem;">
       <div>
-        <h2 style="margin: 0;">Nanang Warung</h2>
-        <p style="margin: 0; color: gray;">Yogyakarta</p>
-        <p style="margin: 0; font-size: 14px;">Mahasigma yang suka mendaur ulang</p>
+        <h2 style="margin: 0;">Dewi Susanti</h2>
+        <p style="margin: 0; color: rgb(0, 0, 51);">Yogyakarta</p>
+        <p style="margin: 0; font-size: 14px;">Mahasiswa yang suka mendaur ulang</p>
       </div>
     </div>
-    
 
-    <!-- Tab Menu -->
+    <!-- Tombol Navigasi -->
     <div style="display: flex; border-bottom: 2px solid #ccc; margin-bottom: 1rem;">
-      <button style="flex: 1; padding: 0.5rem; border: none; background: none; font-weight: bold; border-bottom: 2px solid #000;">Barang Didonasikan</button>
-      <button style="flex: 1; padding: 0.5rem; border: none; background: none; color: gray;">Permintaan Saya</button>
+      <button style="flex: 1; padding: 0.5rem; border: none; background: none; font-weight: bold; border-bottom: 2px solid #2d293a;">
+        Barang Didonasikan
+      </button>
+      <button style="flex: 1; padding: 0.5rem; border: none; background: none; color: rgb(0, 0, 51);">
+        Permintaan Saya
+      </button>
     </div>
 
-    <!-- Barang Didonasikan -->
+    <!-- Daftar Barang Didonasikan -->
     <div style="background: #f1f1f1; border-radius: 10px; padding: 1rem; margin-bottom: 1rem; display: flex;">
-      <img src="meja.jpg" alt="Meja Makan" style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover; margin-right: 1rem;">
+      <img src="meja.jpg" alt="Meja Makan" 
+           style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover; margin-right: 1rem;">
       <div>
         <h4 style="margin: 0;">Meja Makan</h4>
-        <span style="background: #fff3cd; color: #856404; padding: 0.3rem 0.6rem; border-radius: 5px; font-size: 12px;">Sedang Diproses</span>
+        <span style="background: #fff3cd; color: #856404; padding: 0.3rem 0.6rem; border-radius: 5px; font-size: 12px;">
+          Sedang Diproses
+        </span>
+      </div>
+    </div>
+
+    <div style="background: #f1f1f1; border-radius: 10px; padding: 1rem; margin-bottom: 1rem; display: flex;">
+      <img src="print.jpg" alt="Printer" 
+           style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover; margin-right: 1rem;">
+      <div>
+        <h4 style="margin: 0;">Printer</h4>
+        <span style="background: #e2f0fb; color: #34304a; padding: 0.3rem 0.6rem; border-radius: 5px; font-size: 12px;">
+          Diterima
+        </span>
       </div>
     </div>
 
     <div style="background: #f1f1f1; border-radius: 10px; padding: 1rem; display: flex;">
-      <img src="print.jpg" alt="Printer" style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover; margin-right: 1rem;">
+      <img src="lemari.jpg" alt="Lemari" 
+           style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover; margin-right: 1rem;">
       <div>
-        <h4 style="margin: 0;">Printer</h4>
-        <span style="background: #e2f0fb; color: #0c5460; padding: 0.3rem 0.6rem; border-radius: 5px; font-size: 12px;">Diterima</span>
+        <h4 style="margin: 0;">Lemari</h4>
+        <span style="background: #e2f0fb; color: #0c5460; padding: 0.3rem 0.6rem; border-radius: 5px; font-size: 12px;">
+          Diterima
+        </span>
       </div>
     </div>
+
   </div>
 </section>
 
-<script>
- function showPage(id) {
-  document.querySelectorAll('.page').forEach(p => {
-    p.style.display = 'none';
-    p.style.display = ''; // reset gaya display
-    p.style.justifyContent = '';
-    p.style.alignItems = '';
-  });
+  <section id="detailBarang" class="page">
+  <div style="max-width: 600px; margin: auto; background: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+    <img id="detailImg" src="" alt="Gambar Barang" style="width: 100%; height: auto; border-radius: 10px; object-fit: cover; margin-bottom: 1rem;">
+    
+    <h2 id="detailNama">Nama Barang</h2>
+    <p id="detailLokasi" style="color: #000033; margin-bottom: 0.5rem;">📍 Lokasi</p>
+    <p id="detailKategori" style="background: #f1f1f1; display: inline-block; padding: 4px 8px; border-radius: 5px; font-size: 14px;">Kategori</p>
+    
+    <h3 style="margin-top: 1rem;">Deskripsi</h3>
+    <p id="detailDeskripsi" style="margin-bottom: 1.5rem;">Deskripsi barang akan ditampilkan di sini.</p>
 
-  const target = document.getElementById(id);
-  if (target) {
-    if (id === "login" || id === "register") {
-      target.style.display = 'flex';
-      target.style.justifyContent = 'center';
-      target.style.alignItems = 'center';
-    } else {
-      target.style.display = 'block';
-    }
+    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+      <img id="detailDonaturFoto" src="profil cwe.jpg" alt="Donatur" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 1rem;">
+      <div>
+        <strong id="detailDonatur">Nama Donatur</strong><br>
+        <span style="font-size: 14px; color: gray;">Donatur Terverifikasi</span>
+      </div>
+   
+    <button onclick="bukaHalamanChat()" style="padding: 0.7rem 1.2rem; border: none; background-color: #000033; color: rgb(255, 253, 253); font-weight: bold; border-radius: 8px; cursor: pointer;">
+  Chat Sekarang
+</button>
+</div>
+</section>
+<section id="chat" class="page" style="display: none;">
+  <div style="max-width: 600px; margin: auto; background: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+
+    <!-- Peta Lokasi -->
+    <div style="margin-bottom: 1rem;">
+      <iframe
+        src="https://www.google.com/maps?q=Palopo&output=embed"
+        width="100%"
+        height="200"
+        style="border:0; border-radius: 10px;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <!-- Nama Donatur -->
+    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+      <img src="user-icon.png" alt="Anna" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 1rem;">
+      <strong style="font-size: 16px;">Anna</strong>
+    </div>
+
+    <!-- Kotak Chat -->
+    <div id="chatBox" style="background: #f5f5f5; padding: 1rem; height: 200px; overflow-y: auto; border-radius: 10px; margin-bottom: 1rem;">
+      <!-- Chat kosong -->
+    </div>
+
+    <!-- Input pesan -->
+    <form onsubmit="kirimPesan(event)">
+      <input id="inputPesan" type="text" placeholder="Ketik pesan..." style="width: 100%; padding: 0.6rem; border-radius: 8px; border: 1px solid #ccc;">
+    </form>
+
+  </div>
+</section>
+<script>
+document.getElementById('registerForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert("Pendaftaran berhasil! Silakan login.");
+  e.target.reset();
+  showPage('login'); // kembali ke halaman login
+});
+</script>
+<script>
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+    const target = document.getElementById(id);
+    if (target) target.style.display = 'block';
   }
+  function bukaHalamanChat() {
+  showPage("chat");
+  tampilkanMap(lokasiBarang);
 }
 
-
-
-  // Tambahan fungsi login dan donasi biar tetap jalan
-   document.getElementById('donasiForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    document.getElementById('previewDonasi').innerHTML = "<p style='color:green;'>Barang berhasil diunggah!</p>";
-    e.target.reset();
-  });
-
-  document.getElementById('loginForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const nama = e.target[0].value;
-    const email = e.target[1].value;
-    const role = document.querySelector('input[name=\"role\"]:checked').value;
-    document.getElementById('loginMessage').innerHTML =
-      `<p style="color:green;">Halo <strong>${nama}</strong> (${role}), kamu berhasil login dengan email <strong>${email}</strong>.</p>`;
-    e.target.reset();
-
-    document.getElementById('registerForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const nama = e.target[0].value;
-  const email = e.target[1].value;
-  const domisili = e.target[3].value;
-  const role = e.target[4].value;
-
-  document.getElementById('registerMessage').innerHTML =
-    `<p style="color:green;">Registrasi berhasil! Selamat datang <strong>${nama}</strong> dari <strong>${domisili}</strong> sebagai <strong>${role}</strong>.</p>`;
-  e.target.reset();
-});
-
-    
-  });
+ function showDetailBarang(gambar, nama, lokasi, kategori, deskripsi, donatur, fotoDonatur) {
+    document.getElementById("detailImg").src = gambar;
+    document.getElementById("detailNama").innerText = nama;
+    document.getElementById("detailLokasi").innerText = lokasi;
+    document.getElementById("detailKategori").innerText = kategori;
+    document.getElementById("detailDeskripsi").innerText = deskripsi;
+    document.getElementById("detailDonatur").innerText = donatur;
+    document.getElementById("detailDonaturFoto").src = fotoDonatur;
+    showPage("detailBarang");
+  }
+  
 </script>
+<script>
+  function bukaHalamanChat() {
+    showPage("chat");
+  }
+
+  function kirimPesan(event) {
+    event.preventDefault();
+    const isi = document.getElementById("inputPesan").value;
+    if (isi.trim() === "") return;
+    const chatBox = document.getElementById("chatBox");
+    const pesan = document.createElement("p");
+    pesan.textContent = isi;
+    pesan.style.background = "#d6ecff";
+    pesan.style.padding = "0.5rem";
+    pesan.style.margin = "0.3rem 0";
+    pesan.style.borderRadius = "8px";
+    pesan.style.alignSelf = "flex-end";
+    chatBox.appendChild(pesan);
+    document.getElementById("inputPesan").value = "";
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+</script>
+
 </body>
 </html>
